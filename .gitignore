@@ -1,0 +1,37 @@
+# === Secrets & artefacts Wazuh — NE JAMAIS COMMITTER ===
+# Archive générée par l'installeur : contient certificats + mots de passe
+wazuh-install-files.tar
+wazuh-install-files/
+# Mots de passe
+wazuh-passwords.txt
+*passwords*.txt
+# Script d'installation (téléchargeable, inutile de le versionner)
+wazuh-install.sh
+# Certificats et clés
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+root-ca*
+admin-key*
+admin.pem
+
+# === Fichiers de conf pouvant contenir des IP/secrets internes ===
+# (à committer seulement après revue manuelle / anonymisation)
+ossec.conf.bak
+
+# === Divers ===
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# === Archives / binaires lourds ===
+*.iso
+*.msi
+*.tar
+*.tar.gz
+*.zip
