@@ -1,4 +1,4 @@
-# Homelab SOC & Purple Team
+# 📈 Homelab SOC & Purple Team
 
 > Laboratoire de cybersécurité auto-hébergé, conçu comme un mini-SOC et une
 > plateforme purple team. Objectif : pratiquer la détection et la réponse
@@ -8,7 +8,7 @@
 
 ---
 
-## Vue d'ensemble
+## 📋 Présentation
 
 Le lab tourne sur un hyperviseur Proxmox (Ryzen 7), derrière un firewall
 pfSense, sur un LAN isolé `192.168.10.0/24`. Il combine une chaîne de
@@ -33,7 +33,7 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 
 ---
 
-## Projets
+## 📂 Projets
 
 | # | Projet | Statut | Doc |
 |---|--------|--------|-----|
@@ -45,7 +45,7 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 
 ---
 
-## État actuel
+## 📍 État actuel
 
 - **SIEM Wazuh 4.14.7** déployé en all-in-one (indexer + manager +
   dashboard) sur Ubuntu Server 24.04 LTS.
@@ -56,7 +56,7 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 
 ---
 
-## Compétences mises en avant
+## 🧠 Compétences démontrées
 
 SIEM · monitoring · analyse de logs · réponse à incident · Active
 Directory · purple team · MITRE ATT&CK · durcissement · conformité
@@ -65,7 +65,16 @@ firewall (pfSense) · automatisation.
 
 ---
 
-## Stack
+## 🛠️ Stack
 
 Proxmox VE · pfSense · Wazuh · Ubuntu Server · Windows Server 2025 (AD) ·
 Kali Linux · WireGuard · Git.
+
+---
+
+## 👤 Auteur
+
+**Alexis Noiret** — Bachelor IT Cybersécurité, La Plateforme
+
+- Portfolio : [alexis-noiret.students-laplateforme.io](https://alexis-noiret.students-laplateforme.io)
+- GitHub : [github.com/alexis-noiret](https://github.com/alexis-noiret)
