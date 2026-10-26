@@ -4,7 +4,7 @@
 > plateforme purple team. Objectif : pratiquer la détection et la réponse
 > côté défensif (blue), jouer des attaques réalistes côté offensif (red), et
 > mesurer la couverture de détection en continu — le tout documenté pour le
-> portfolio, en vue d'une alternance en cybersécurité (secteur santé).
+> portfolio, en vue d'une alternance en cybersécurité.
 
 ---
 
