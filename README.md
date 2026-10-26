@@ -1,5 +1,10 @@
 # 📈 Homelab SOC & Purple Team
 
+![Wazuh](https://img.shields.io/badge/SIEM-Wazuh-blue)
+![Purple Team](https://img.shields.io/badge/Approach-Purple%20Team-purple)
+![Project](https://img.shields.io/badge/Project-Homelab%20SOC-orange)
+![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
+
 > Laboratoire de cybersécurité auto-hébergé, conçu comme un mini-SOC et une
 > plateforme purple team. Objectif : pratiquer la détection et la réponse
 > côté défensif (blue), jouer des attaques réalistes côté offensif (red), et
