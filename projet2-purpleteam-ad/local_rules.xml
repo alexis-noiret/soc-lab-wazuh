@@ -1,0 +1,32 @@
+<!--
+  Règles de détection custom — Projet 2 (Purple Team AD)
+  Emplacement sur le manager : /var/ossec/etc/rules/local_rules.xml
+  Les IDs >= 100000 sont réservés aux règles utilisateur.
+-->
+
+<group name="local,windows,ad_attack,">
+
+  <!--
+    Règle 100100 — Escalade d'un logon NTLM distant provenant de l'hôte
+    attaquant connu (Kali, 192.168.10.102).
+
+    Principe : la règle Wazuh de base 92652 détecte déjà un logon distant
+    NTLM ("possible pass-the-hash") au niveau 6. On l'escalade au niveau 12
+    lorsque la source est l'IP de la machine d'attaque — c'est-à-dire de la
+    "threat intel" maison appliquée au contexte du lab.
+
+    Le second <field> (negate) exclut les ANONYMOUS LOGON générés par le
+    null bind des outils d'énumération, pour réduire le bruit.
+  -->
+  <rule id="100100" level="12">
+    <if_sid>92652</if_sid>
+    <field name="win.eventdata.ipAddress">192.168.10.102</field>
+    <field name="win.eventdata.targetUserName" negate="yes">ANONYMOUS</field>
+    <description>Connexion AD NTLM depuis l'hote attaquant Kali - compte $(win.eventdata.targetUserName) depuis $(win.eventdata.ipAddress)</description>
+    <mitre>
+      <id>T1078</id>
+    </mitre>
+    <group>authentication_success,ad_attack,</group>
+  </rule>
+
+</group>

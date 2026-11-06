@@ -42,8 +42,8 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 
 | # | Projet | Statut | Doc |
 |---|--------|--------|-----|
-| 1 | **SOC maison — SIEM Wazuh** | 🟨 socle opérationnel | [projet1-siem-wazuh](./projet1-siem-wazuh/) |
-| 2 | Purple team Active Directory | ⬜ à venir | — |
+| 1 | **SOC maison — SIEM Wazuh** | ✅ socle complet | [projet1-siem-wazuh](./projet1-siem-wazuh/) |
+| 2 | **Purple team Active Directory** | 🟨 en cours | [projet2-purpleteam-ad](./projet2-purpleteam-ad/) |
 | 3 | IDS + analyse de trafic (Suricata) | ⬜ à venir | — |
 | 4 | Boîte à outils d'automatisation | ⬜ à venir | — |
 | 5 | Durcissement & conformité (ISO 27001 / HDS / ANSSI) | ⬜ à venir | — |
@@ -54,9 +54,11 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 
 - **SIEM Wazuh 4.14.7** déployé en all-in-one (indexer + manager +
   dashboard) sur Ubuntu Server 24.04 LTS.
-- **Premier agent enrôlé** : le contrôleur de domaine Windows Server AD,
-  avec évaluation de configuration (SCA CIS), intégrité des fichiers (FIM)
-  et rootcheck actifs.
+- **3 agents actifs** (Windows Server AD, Windows Client, Kali), avec
+  **Sysmon** sur les deux hôtes Windows pour une télémétrie de niveau EDR.
+- **Première boucle purple team bouclée** : énumération AD depuis Kali →
+  détection dans Wazuh → **règle de détection custom** (`100100`, T1078)
+  écrite et validée.
 - Infrastructure documentée, secrets exclus du versionnement.
 
 ---
@@ -64,16 +66,16 @@ Détail complet du matériel, du plan d'adressage et de la topologie :
 ## 🧠 Compétences démontrées
 
 SIEM · monitoring · analyse de logs · réponse à incident · Active
-Directory · purple team · MITRE ATT&CK · durcissement · conformité
-(ISO 27001, HDS, ANSSI, RGPD) · virtualisation (Proxmox) · réseau &
-firewall (pfSense) · automatisation.
+Directory · purple team · MITRE ATT&CK · écriture de règles de détection ·
+durcissement · conformité (ISO 27001, HDS, ANSSI, RGPD) · virtualisation
+(Proxmox) · réseau & firewall (pfSense) · automatisation.
 
 ---
 
 ## 🛠️ Stack
 
 Proxmox VE · pfSense · Wazuh · Ubuntu Server · Windows Server 2025 (AD) ·
-Kali Linux · WireGuard · Git.
+Kali Linux · NetExec · Sysmon · WireGuard · Git.
 
 ---
 
