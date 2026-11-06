@@ -55,6 +55,11 @@ via **NetExec** (`nxc ldap`) qui négocie le *sign & seal* SASL sur le port
 qui force l'attaquant vers un canal signé et modifie la trace laissée — pas
 juste « l'attaque marche ».
 
+L'attaque depuis Kali — on voit `signing:Enforced`, l'authentification
+`[+] lab.local\alexis` et l'énumération des comptes du domaine :
+
+![Attaque nxc](./captures/01-attaque-nxc.png)
+
 ---
 
 ## 4. Règle de détection custom
@@ -77,9 +82,19 @@ dans `/var/ossec/etc/rules/local_rules.xml`).
 12** quand la source est l'IP de l'hôte d'attaque (threat intel maison), et
 exclut les `ANONYMOUS LOGON` (bruit du null bind) via `negate`.
 
-Validée en live : après rejeu de l'attaque, l'alerte `rule.id:100100`
-remonte en niveau 12 avec sa description dynamique (`...compte alexis depuis
-192.168.10.102`).
+La règle, écrite dans l'éditeur du dashboard (`etc/rules/local_rules.xml`) :
+
+![Règle 100100 — XML](./captures/03-regle-xml.png)
+
+Elle apparaît ensuite dans la liste des règles custom du manager :
+
+![Règle 100100 — liste](./captures/02-regle-liste.png)
+
+**Validation en live** : après rejeu de l'attaque, l'alerte `rule.id:100100`
+remonte en **niveau 12** avec sa description dynamique
+(`...compte alexis depuis 192.168.10.102`), hors logons anonymes :
+
+![Alerte level 12](./captures/04-alerte-level12.png)
 
 ---
 

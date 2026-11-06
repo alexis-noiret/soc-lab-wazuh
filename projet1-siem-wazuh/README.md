@@ -178,3 +178,15 @@ Confirmation côté dashboard (Agents management → Endpoints) :
 - [ ] Ingestion des logs **pfSense** dans Wazuh.
 - [ ] Première règle de détection custom + premier dashboard.
 - [ ] Brancher les exercices purple team (projet 2) sur ce SIEM.
+
+---
+
+## 8. Captures
+
+**Vue d'ensemble du SIEM** — alertes des dernières 24 h classées par sévérité :
+
+![Overview Wazuh](./captures/01-overview.png)
+
+**Agents enrôlés** — les 3 hôtes actifs (DC, client, Kali) :
+
+![Endpoints](./captures/02-endpoints.png)

@@ -153,3 +153,17 @@ Hijacking).
 Prêt pour le projet 2 (purple team AD) : les attaques lancées depuis Kali
 génèrent des événements Sysmon sur les cibles Windows, corrélés et mappés
 ATT&CK dans le dashboard.
+
+---
+
+## 6. Captures
+
+**Télémétrie Sysmon** — événements du canal `Microsoft-Windows-Sysmon/Operational`
+remontés et classés par les règles Wazuh (PowerShell, Discovery, etc.) :
+
+![Events Sysmon](./captures/03-sysmon.png)
+
+**Corrélation MITRE ATT&CK** — tactiques et techniques déduites automatiquement
+de la télémétrie :
+
+![MITRE ATT&CK](./captures/04-mitre-attack.png)
